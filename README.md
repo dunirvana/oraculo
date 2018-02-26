@@ -2,8 +2,9 @@
 
 Aplicativo para administração de conhecimento!
 
-## Estrutura de dados
+## Estruturas de dados
 
+```
 {
   "conhecimentos" : {
     "id-do-usuario" : {
@@ -17,6 +18,7 @@ Aplicativo para administração de conhecimento!
       },
     }
   },
+  
   "usuario_detalhe" : {
     "id-do-usuario" : {
       "email" : texto,
@@ -25,3 +27,8 @@ Aplicativo para administração de conhecimento!
     },
   }
 }
+```
+
+## Estruturas de arquivos
+
+**arquivos/** id-do-conhecimento + nome-original-do-arquivo
