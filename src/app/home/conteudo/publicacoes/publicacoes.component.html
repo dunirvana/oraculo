@@ -1,0 +1,46 @@
+<div class="media" *ngFor="let publicacao of publicacoes">
+
+  <a target="_blank" [href]="publicacao.url_imagem || ''" 
+    data-toggle="tooltip" data-placement="bottom" [title]="publicacao.nomeArquivo"    
+    [download]="publicacao.nomeArquivo"
+    *ngIf="publicacao.url_imagem !== undefined" >
+    <img class="mr-3" src="/assets/ic_cloud_download_black_48dp_2x.png" alt="Generic placeholder image">
+  </a>
+  
+  <img class="mr-3" src="/assets/ic_cloud_off_black_48dp_2x.png" alt="Generic placeholder image" *ngIf="publicacao.url_imagem === undefined">
+
+  <div class="media-body">
+    <h4 class="mt-0">{{publicacao.titulo}}</h4>
+    {{publicacao.descricao}}
+    <div>
+      <span class="badge badge-pill badge-primary" *ngFor="let tag of publicacao.tags">{{tag}}</span>
+    </div>
+    <p class="text-right">Autor: {{publicacao.nome_usuario}}</p>
+  </div>
+</div>
+<!-- 
+<div class="row" *ngFor="let publicacao of publicacoes">
+  <div class="col d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">Autor:<strong>{{publicacao.nome_usuario}}</strong></p>
+      </div>
+
+      <a target="_blank" [href]="publicacao.url_imagem || ''" class="btn btn-primary">Download</a>
+
+      <div class="card-body">
+        <p class="card-text">
+          <strong>{{publicacao.nome_usuario}}</strong> {{publicacao.titulo}}
+        </p>
+
+        <hr />
+        <input 
+          type="text" 
+          class="form-control comentario"
+          placeholder="Adicione um comentário..." 
+        />
+      </div>
+    </div>
+  </div>
+</div>
+-->

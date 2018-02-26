@@ -1,0 +1,17 @@
+.badge{
+    margin-right: 4px;
+}
+
+.media{
+    background-color: white;
+    padding: 1%;
+    margin: 1%;
+}
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { 
+    border-radius: 20px; 
+}
+
+.toggle.ios .toggle-handle { 
+    border-radius: 20px; 
+}

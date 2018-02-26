@@ -1,0 +1,28 @@
+<div class="row">
+    <nav class="navbar fixed-top navbar navbar-dark bg-primary">        
+        <div class="container">
+          <a class="navbar-brand" href="/home">Oráculo</a>
+          <div>            
+            <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                      
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <button class="dropdown-item" type="button">Sobre</button>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#" (click)="sair()">Sair</a>
+                    </div>
+                  </div>          
+            </div>  
+                
+          </div>
+    </nav>      
+</div>
+
+<div class="row d-flex justify-content-center">
+    <div *ngIf="mensagemService.mensagens.length" class="alert alert-danger" role="alert">
+        {{ mensagemService.mensagens[0].descricao }}
+        <button type="button" class="close" aria-label="Close" (click)="mensagemService.limpar()">
+            <span aria-hidden="true">&times;</span>
+        </button>    
+    </div>      
+</div>
